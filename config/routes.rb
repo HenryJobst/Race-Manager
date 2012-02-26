@@ -1,7 +1,8 @@
 RaceManager::Application.routes.draw do
-  resources :competitors
 
+  resources :competitors
   resources :clubs
+  resources :stamps
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

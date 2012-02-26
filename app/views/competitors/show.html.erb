@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @competitor.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @competitor.last_name %>
+</p>
+
+<p>
+  <b>Card:</b>
+  <%= @competitor.card_id %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%= @competitor.gender %>
+</p>
+
+<p>
+  <b>Year of birth:</b>
+  <%= @competitor.year_of_birth %>
+</p>
+
+<p>
+  <b>Club:</b>
+  <%= @competitor.club_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_competitor_path(@competitor) %> |
+<%= link_to 'Back', competitors_path %>

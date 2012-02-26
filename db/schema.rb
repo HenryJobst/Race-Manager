@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120225183551) do
+ActiveRecord::Schema.define(:version => 20120226205818) do
 
   create_table "clubs", :force => true do |t|
     t.string   "name"
@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(:version => 20120225183551) do
     t.string    "event_url",         :limit => 64
     t.string    "event_location",    :limit => 200
     t.timestamp "last_modification"
+    t.datetime  "created_on"
+    t.datetime  "updated_on"
   end
 
   add_index "lcevents", ["id_event"], :name => "id_event", :unique => true
@@ -61,6 +63,8 @@ ActiveRecord::Schema.define(:version => 20120225183551) do
     t.integer   "stamp_punch_ms",                                     :null => false
     t.integer   "stamp_punch_wday",                    :default => 0, :null => false
     t.timestamp "last_modification",                                  :null => false
+    t.datetime  "created_on"
+    t.datetime  "updated_on"
   end
 
   add_index "stamps", ["id_stamp", "id_event"], :name => "id_event_link_id_stamp"

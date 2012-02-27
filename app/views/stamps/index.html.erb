@@ -1,0 +1,10 @@
+<% if @stamps.blank? %>
+<p>Im Moment liegen noch keine Daten vor.</p>
+<% else %>
+<p>Die aktuellen Zeiten:</p>
+<ul id="stamps">
+<% @stamps.each do |c| %>
+<li><%= c.stamp_card_id %>, <%= c.stamp_punch_datetime %></li>
+<% end %>
+</ul>
+<% end %>

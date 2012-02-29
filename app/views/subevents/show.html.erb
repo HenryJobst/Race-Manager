@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Event:</b>
+  <%= @subevent.event_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @subevent.name %>
+</p>
+
+<p>
+  <b>Distance:</b>
+  <%= @subevent.distance %>
+</p>
+
+<p>
+  <b>Starttime:</b>
+  <%= @subevent.starttime %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @subevent.type %>
+</p>
+
+<p>
+  <b>Posts:</b>
+  <%= @subevent.posts %>
+</p>
+
+<p>
+  <b>Height:</b>
+  <%= @subevent.height %>
+</p>
+
+
+<%= link_to 'Edit', edit_subevent_path(@subevent) %> |
+<%= link_to 'Back', subevents_path %>

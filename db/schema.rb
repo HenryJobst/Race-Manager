@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120228222055) do
+ActiveRecord::Schema.define(:version => 20120229221145) do
 
   create_table "clubs", :force => true do |t|
     t.string   "name"
@@ -70,12 +70,25 @@ ActiveRecord::Schema.define(:version => 20120228222055) do
   add_index "stamps", ["id_stamp", "id_event"], :name => "id_event_link_id_stamp"
   add_index "stamps", ["id_stamp"], :name => "id_stamp", :unique => true
 
+  create_table "subevents", :force => true do |t|
+    t.integer  "event_id"
+    t.string   "name"
+    t.integer  "distance"
+    t.time     "starttime"
+    t.integer  "type"
+    t.integer  "posts"
+    t.integer  "height"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "teams", :force => true do |t|
     t.string   "name"
     t.integer  "club_id"
     t.integer  "event_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "subevent_id"
   end
 
 end

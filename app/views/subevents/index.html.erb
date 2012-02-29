@@ -1,0 +1,35 @@
+<h1>Listing subevents</h1>
+
+<table>
+  <tr>
+    <th>Event</th>
+    <th>Name</th>
+    <th>Distance</th>
+    <th>Starttime</th>
+    <th>Type</th>
+    <th>Posts</th>
+    <th>Height</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @subevents.each do |subevent| %>
+  <tr>
+    <td><%= subevent.event_id %></td>
+    <td><%= subevent.name %></td>
+    <td><%= subevent.distance %></td>
+    <td><%= subevent.starttime %></td>
+    <td><%= subevent.type %></td>
+    <td><%= subevent.posts %></td>
+    <td><%= subevent.height %></td>
+    <td><%= link_to 'Show', subevent %></td>
+    <td><%= link_to 'Edit', edit_subevent_path(subevent) %></td>
+    <td><%= link_to 'Destroy', subevent, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Subevent', new_subevent_path %>

@@ -1,5 +1,7 @@
 RaceManager::Application.routes.draw do
 
+  resources :subevents
+
   resources :teams
 
   get "static_pages/home"

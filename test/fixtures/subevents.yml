@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  event_id: 1
+  name: MyString
+  distance: 
+  starttime: 2012-02-29 23:07:34
+  type: 1
+  posts: 1
+  height: 1
+
+two:
+  event_id: 1
+  name: MyString
+  distance: 
+  starttime: 2012-02-29 23:07:34
+  type: 1
+  posts: 1
+  height: 1

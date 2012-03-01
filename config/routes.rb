@@ -1,5 +1,9 @@
 RaceManager::Application.routes.draw do
 
+  resources :event_competitors
+
+  resources :team_competitors
+
   resources :subevents
 
   resources :teams

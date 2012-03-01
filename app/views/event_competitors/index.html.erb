@@ -1,0 +1,29 @@
+<h1>Listing event_competitors</h1>
+
+<table>
+  <tr>
+    <th>Event</th>
+    <th>Subevent</th>
+    <th>Competitor</th>
+    <th>Card</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @event_competitors.each do |event_competitor| %>
+  <tr>
+    <td><%= event_competitor.event_id %></td>
+    <td><%= event_competitor.subevent_id %></td>
+    <td><%= event_competitor.competitor_id %></td>
+    <td><%= event_competitor.card_id %></td>
+    <td><%= link_to 'Show', event_competitor %></td>
+    <td><%= link_to 'Edit', edit_event_competitor_path(event_competitor) %></td>
+    <td><%= link_to 'Destroy', event_competitor, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Event competitor', new_event_competitor_path %>

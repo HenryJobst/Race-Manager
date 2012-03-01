@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Event:</b>
+  <%= @event_competitor.event_id %>
+</p>
+
+<p>
+  <b>Subevent:</b>
+  <%= @event_competitor.subevent_id %>
+</p>
+
+<p>
+  <b>Competitor:</b>
+  <%= @event_competitor.competitor_id %>
+</p>
+
+<p>
+  <b>Card:</b>
+  <%= @event_competitor.card_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_competitor_path(@event_competitor) %> |
+<%= link_to 'Back', event_competitors_path %>

@@ -4,5 +4,6 @@ class Event < ActiveRecord::Base
   has_many :subevents
   has_many :stamps
   has_many :teams
-
+  has_many :event_competitors
+  has_many :competitors, :through => :event_competitors
 end

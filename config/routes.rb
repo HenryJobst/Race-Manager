@@ -1,20 +1,19 @@
 RaceManager::Application.routes.draw do
 
-  resources :event_competitors
-
-  resources :team_competitors
+  resources :stamps
+  resources :events
 
   resources :subevents
-
   resources :teams
 
-  get "static_pages/home"
-
-  get "static_pages/about"
+  resources :event_competitors
+  resources :team_competitors
 
   resources :competitors
   resources :clubs
-  resources :stamps
+
+  get "static_pages/home"
+  get "static_pages/about"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

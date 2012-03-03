@@ -1,5 +1,7 @@
 RaceManager::Application.routes.draw do
 
+  get "controll_results/show"
+
   resources :stamps
   resources :events
 
@@ -14,6 +16,8 @@ RaceManager::Application.routes.draw do
 
   get "static_pages/home"
   get "static_pages/about"
+
+  match ':controller/:action/:controll_id'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

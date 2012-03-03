@@ -1,0 +1,2 @@
+module ControllResultsHelper
+end

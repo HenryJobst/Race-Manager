@@ -1,0 +1,22 @@
+<% provide(:title, "Zwischenzeiten - Event: #{@event.event_name}, Posten: #{@controll_id}") %>
+<h1>Zwischenzeiten - <%= "Event: #{@event.event_name}, Posten: #{@controll_id}" %></h1>
+
+<% if @stamps.blank? %>
+<p>Im Moment liegen noch keine Daten vom Posten <%= @controll_id %> vor.</p>
+<% else %>
+<table>
+<tr>
+<td>Chip-Id</td>
+<td>Zeit</td>
+<td>SI-Zeit</td>
+</tr>
+<% @stamps.each do |c| %>
+<tr>
+<td><%= c.stamp_card_id %></td>
+<td><%= c.stamp_punch_datetime %></td>
+<td><%= c.stamp_punch_timesi %></td>
+</tr>
+<% end %>
+</table>
+<% end %>
+

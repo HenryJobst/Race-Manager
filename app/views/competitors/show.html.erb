@@ -1,3 +1,5 @@
+<% provide(:title, 'Show competitor') %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -27,7 +29,7 @@
 
 <p>
   <b>Club:</b>
-  <%= @competitor.club_id %>
+  <%= @competitor.club.name %>
 </p>
 
 

@@ -1,3 +1,5 @@
+<% provide(:title, 'Listing competitors') %>
+
 <h1>Listing competitors</h1>
 
 <table>
@@ -20,7 +22,7 @@
     <td><%= competitor.card_id %></td>
     <td><%= competitor.gender %></td>
     <td><%= competitor.year_of_birth %></td>
-    <td><%= competitor.club_id %></td>
+    <td><%= competitor.club.name %></td>
     <td><%= link_to 'Show', competitor %></td>
     <td><%= link_to 'Edit', edit_competitor_path(competitor) %></td>
     <td><%= link_to 'Destroy', competitor, confirm: 'Are you sure?', method: :delete %></td>

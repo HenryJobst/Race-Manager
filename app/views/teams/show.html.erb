@@ -7,17 +7,17 @@
 
 <p>
   <b>Club:</b>
-  <%= @team.club_id %>
+  <%= @team.club.name if @team.club %>
 </p>
 
 <p>
   <b>Event:</b>
-  <%= @team.event_id %>
+  <%= @team.event.event_name %>
 </p>
 
 <p>
   <b>Subevent:</b>
-  <%= @team.subevent_id %>
+  <%= @team.subevent.name if @team.subevent %>
 </p>
 
 

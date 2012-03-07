@@ -16,16 +16,13 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :club_id %><br />
-    <%= f.number_field :club_id %>
+    <%= f.label :club_id %> <%= f.select(:club_id, options_from_collection_for_select(Club.all, "id", "name", f.object.club_id || 0), :include_blank => true)  %><br />
   </div>
   <div class="field">
-    <%= f.label :event_id %><br />
-    <%= f.number_field :event_id %>
+    <%= f.label :event_id %> <%= f.select(:event_id, options_from_collection_for_select(Event.all, "id_event", "event_name", f.object.event_id || 0))  %><br />
   </div>
   <div class="field">
-    <%= f.label :subevent_id %><br />
-    <%= f.number_field :subevent_id %>
+    <%= f.label :subevent_id %> <%= f.select(:subevent_id, options_from_collection_for_select(Subevent.all, "id", "name", f.object.subevent_id || 0), :include_blank => true)  %><br />
   </div>
   <div class="actions">
     <%= f.submit %>

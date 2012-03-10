@@ -11,24 +11,25 @@
     </div>
   <% end %>
 
+  <div class="form-inline">
   <div class="field">
-    <%= f.label t(:first_name) %><br />
+    <%= f.label t(:first_name) %>
     <%= f.text_field :first_name %>
   </div>
   <div class="field">
-    <%= f.label t(:last_name) %><br />
+    <%= f.label t(:last_name) %>
     <%= f.text_field :last_name %>
   </div>
   <div class="field">
-    <%= f.label :card_id, t(:card_id) %><br />
+    <%= f.label :card_id, t(:card_id) %>
     <%= f.number_field :card_id %>
   </div>
   <div class="field">
   	<%= f.label t(:gender) %>
     <%= f.radio_button :gender, t(:men_abbrev) %>
-    <%= f.label :gender_men, t(:men) %>
+    <%= f.label :gender_men, t(:men) %>    
     <%= f.radio_button :gender, t(:women_abbrev) %>
-    <%= f.label :gender_woman, t(:women) %>
+    <%= f.label :gender_woman, t(:women) %>    
   </div>
   <div class="field">
     <%= f.label t(:year_of_birth) %>
@@ -39,5 +40,6 @@
   </div>
   <div class="actions">
     <%= f.submit t(:submit) %>
+  </div>
   </div>
 <% end %>

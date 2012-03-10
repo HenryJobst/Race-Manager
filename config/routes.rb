@@ -17,6 +17,13 @@ RaceManager::Application.routes.draw do
   get "static_pages/home"
   
   match '/about', to: 'static_pages#about'
+  match '/competitors', to: 'competitors#show'
+  match '/clubs', to: 'clubs#show'
+  match '/events', to: 'events#show'
+  match '/subevents', to: 'subevents#show'
+  match '/event_competitors', to: 'event_competitors#show'
+  match '/teams', to: 'teams#show'
+  match '/team_competitors', to: 'team_competitors#show'
 
   match ':controller/:action/:controll_id'
 

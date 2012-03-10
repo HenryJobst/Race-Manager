@@ -32,13 +32,13 @@
 				<div class="span2">
 					<nav>
 						<ul class="nav sidebar">
-							<li> <%= link_to t(:competitors), "competitors" %> </li>							
-							<li> <%= link_to t(:clubs), "clubs" %> </li><br />
-							<li> <%= link_to t(:events), "events" %> </li>
-							<li> <%= link_to t(:subevents), "subevents" %> </li>
-							<li> <%= link_to t(:event_competitors), "event_competitors" %> </li><br />
-							<li> <%= link_to t(:teams), "teams" %> </li>
-							<li> <%= link_to t(:team_competitors), "team_competitors" %> </li>							
+							<li> <%= link_to t(:competitors), competitors_path %> </li>							
+							<li> <%= link_to t(:clubs), clubs_path %> </li><br />
+							<li> <%= link_to t(:events), events_path %> </li>
+							<li> <%= link_to t(:subevents), subevents_path %> </li>
+							<li> <%= link_to t(:event_competitors), event_competitors_path %> </li><br />
+							<li> <%= link_to t(:teams), teams_path %> </li>
+							<li> <%= link_to t(:team_competitors), team_competitors_path %> </li>							
 						</ul>
 					</nav>
 					<%= t(:powered_by) %> <br /> <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>

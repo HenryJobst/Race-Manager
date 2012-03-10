@@ -1,37 +1,37 @@
-<% provide(:title, 'Show competitor') %>
+<% provide(:title, t(:show_competitor)) %>
 
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>First name:</b>
+  <b><%= t(:first_name) %>:</b>
   <%= @competitor.first_name %>
 </p>
 
 <p>
-  <b>Last name:</b>
+  <b><%= t(:last_name) %>:</b>
   <%= @competitor.last_name %>
 </p>
 
 <p>
-  <b>Card:</b>
+  <b><%= t(:card_id) %>:</b>
   <%= @competitor.card_id %>
 </p>
 
 <p>
-  <b>Gender:</b>
+  <b><%= t(:gender) %>:</b>
   <%= @competitor.gender %>
 </p>
 
 <p>
-  <b>Year of birth:</b>
+  <b><%= t(:year_of_birth) %>:</b>
   <%= @competitor.year_of_birth %>
 </p>
 
 <p>
-  <b>Club:</b>
+  <b><%= t(:club) %>:</b>
   <%= @competitor.club.name if @competitor.club %>
 </p>
 
 
-<%= link_to 'Edit', edit_competitor_path(@competitor) %> |
-<%= link_to 'Back', competitors_path %>
+<%= link_to t(:edit), edit_competitor_path(@competitor) %> |
+<%= link_to t(:back), competitors_path %>

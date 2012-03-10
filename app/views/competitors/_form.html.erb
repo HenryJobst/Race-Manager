@@ -12,31 +12,32 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :first_name %><br />
+    <%= f.label t(:first_name) %><br />
     <%= f.text_field :first_name %>
   </div>
   <div class="field">
-    <%= f.label :last_name %><br />
+    <%= f.label t(:last_name) %><br />
     <%= f.text_field :last_name %>
   </div>
   <div class="field">
-    <%= f.label :card_id %><br />
+    <%= f.label :card_id, t(:card_id) %><br />
     <%= f.number_field :card_id %>
   </div>
   <div class="field">
-    <%= f.radio_button :gender, "M" %>
-    <%= f.label :gender_men, "Men" %>
-    <%= f.radio_button :gender, "W" %>
-    <%= f.label :gender_woman, "Women" %>
+  	<%= f.label t(:gender) %>
+    <%= f.radio_button :gender, t(:men_abbrev) %>
+    <%= f.label :gender_men, t(:men) %>
+    <%= f.radio_button :gender, t(:women_abbrev) %>
+    <%= f.label :gender_woman, t(:women) %>
   </div>
   <div class="field">
-    <%= f.label :year_of_birth %>
+    <%= f.label t(:year_of_birth) %>
     <%= f.select(:year_of_birth, 1910..Time.now.year, :selected => (f.object.year_of_birth || Time.now.year)) %>
   </div>
   <div class="field">
-    <%= f.label :club_id %> <%= f.select(:club_id, options_from_collection_for_select(Club.all, "id", "name", f.object.club_id || 0), :include_blank => true)  %><br />
+    <%= f.label :club_id, t(:club) %> <%= f.select(:club_id, options_from_collection_for_select(Club.all, "id", "name", f.object.club_id || 0), :include_blank => true)  %><br />
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit t(:submit) %>
   </div>
 <% end %>

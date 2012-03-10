@@ -204,14 +204,29 @@ de:
       <<: *errors
       
   # my local texts
-  edit_competitor: Wettkämpfer bearbeiten
-  list_competitors: Wettkämpfer
-  new_competitor: Neuer Wettkämpfer
-  show_competitor: Wettkämpfer
+  edit_competitor: Teilnehmer bearbeiten
+  list_competitors: Teilnehmerliste
+  new_competitor: Neuer Teilnehmer
+  show_competitor: Teilnehmerinformationen
   first_name: Vorname
   last_name: Nachname
   year_of_birth: Geburtsjahr
+  clubs: Vereine
   club: Verein
+  competitors: Teilnehmer
+  competitor: Teilnehmer
+  events: Wettkämpfe
+  event: Wettkampf
+  subevents: Kategorien
+  subevent: Kategorie
+  teams: Teams
+  team: Team
+  stamps: Zwischenzeiten
+  stamp: Zwischenzeit
+  event_competitors: Wettkampfteilnehmer
+  event_competitor: Wettkampfteilnehmer
+  team_competitors: Teammitglieder
+  team_competitor: Teammitglied
   gender: Geschlecht
   men: männlich
   women: weiblich
@@ -219,9 +234,16 @@ de:
   women_abbrev: W
   card_id: Chip-Nummer
   submit: Übernehmen
+  home: Startseite
   show: Anzeigen
   back: Zurück
   edit: Bearbeiten
   destroy: Löschen
+  help: Hilfe
+  about: Über
+  log_in: Login
+  log_out: Logout
   create_new_competitor: neuen Wettkämpfer anlegen
   are_you_sure: Sind sie sicher?
+  powered_by: unterstützt durch
+  welcome_on_race_manager: Willkommen beim Race Manager

@@ -1,5 +1,6 @@
 <% provide(:title, t(:list_competitors)) %>
 
+<div class="left">
 <h1><%= t(:list_competitors) %></h1>
 
 <table>
@@ -29,7 +30,6 @@
   </tr>
 <% end %>
 </table>
-
 <br />
-
 <%= link_to t(:create_new_competitor), new_competitor_path %>
+</div>

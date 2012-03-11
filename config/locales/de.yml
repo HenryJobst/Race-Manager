@@ -243,6 +243,8 @@ de:
   about: Über
   log_in: Login
   log_out: Logout
+  base_data: Grunddaten
+  event_data: Wettkampfdaten
   create_new_competitor: neuen Wettkämpfer anlegen
   are_you_sure: Sind sie sicher?
   powered_by: unterstützt durch

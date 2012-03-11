@@ -1,53 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Race-Manager | <%= yield(:title) %></title>
-  <%= stylesheet_link_tag    "application", media: "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-  <!--[if lt IE 9]>
-  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-</head>
-<body>
-	
-<header class="navbar navbar-fixed-top">
-			<div class="navbar-inner">
-				<div class="container">
-					<!--%= image_tag "race_manager_logo.png", alt: "Race Manager", height: "40", id: "logo" %-->
-					<p id="logo">Race Manager</p>
-					<nav>
-						<ul class="nav pull-right">
-							<li> <%= link_to t(:about), about_path %> </li>
-							<li> <%= link_to t(:home), :root %> </li>
-							<li> <%= link_to t(:log_in), '#' %> </li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</header>
-    
-<div class="container-fluid">
+	<head>
+		<title>Race-Manager | <%= yield(:title) %></title>
+		<%= stylesheet_link_tag    "application", media: "all" %>
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
+		<%= render 'layouts/shim' %>
+	</head>
+	<body>
+		<%= render 'layouts/header'%>
+		<div class="container-fluid">
 			<div class="row-fluid">
 				<div class="span2">
-					<nav>
-						<ul class="nav sidebar">
-							<li> <%= link_to t(:competitors), competitors_path %> </li>							
-							<li> <%= link_to t(:clubs), clubs_path %> </li><br />
-							<li> <%= link_to t(:events), events_path %> </li>
-							<li> <%= link_to t(:subevents), subevents_path %> </li>
-							<li> <%= link_to t(:event_competitors), event_competitors_path %> </li><br />
-							<li> <%= link_to t(:teams), teams_path %> </li>
-							<li> <%= link_to t(:team_competitors), team_competitors_path %> </li>							
-						</ul>
-					</nav>
-					<%= t(:powered_by) %> <br /> <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+					<%= render 'layouts/sidebar'%>
 				</div>
 				<div class="span10">
 					<%= yield %>
 				</div>
 			</div>
 		</div>
-
-</body>
+		<%= render 'layouts/footer'%>
+	</body>
 </html>

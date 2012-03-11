@@ -1,5 +1,9 @@
 <% provide(:title, t(:show_competitor)) %>
 
+<div class="page-header">
+	<h1><%= t(:show_competitor) %></h1>
+</div>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -33,5 +37,5 @@
 </p>
 
 
-<%= link_to t(:edit), edit_competitor_path(@competitor) %> |
-<%= link_to t(:back), competitors_path %>
+<%= link_to t(:edit), edit_competitor_path(@competitor), class: "btn" %>
+<%= link_to t(:back), competitors_path, class: "btn" %>

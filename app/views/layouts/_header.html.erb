@@ -1,0 +1,23 @@
+<header class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<!--%= image_tag "race_manager_logo.png", alt: "Race Manager", height: "40", id: "logo" %-->
+			<p class="nav pull-left", id="logo">
+				Race Manager
+			</p>
+			<nav>
+				<ul class="nav pull-right">
+					<li>
+						<%= link_to t(:about), about_path %>
+					</li>
+					<li>
+						<%= link_to t(:home), :root %>
+					</li>
+					<li>
+						<%= link_to t(:log_in), '#' %>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>

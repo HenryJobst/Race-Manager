@@ -1,45 +1,45 @@
 <%= form_for(@competitor) do |f| %>
-  <% if @competitor.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@competitor.errors.count, "error") %> prohibited this competitor from being saved:</h2>
-
-      <ul>
-      <% @competitor.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="form-inline">
-  <div class="field">
-    <%= f.label t(:first_name) %>
-    <%= f.text_field :first_name %>
-  </div>
-  <div class="field">
-    <%= f.label t(:last_name) %>
-    <%= f.text_field :last_name %>
-  </div>
-  <div class="field">
-    <%= f.label :card_id, t(:card_id) %>
-    <%= f.number_field :card_id %>
-  </div>
-  <div class="field">
-  	<%= f.label t(:gender) %>
-    <%= f.radio_button :gender, t(:men_abbrev) %>
-    <%= f.label :gender_men, t(:men) %>    
-    <%= f.radio_button :gender, t(:women_abbrev) %>
-    <%= f.label :gender_woman, t(:women) %>    
-  </div>
-  <div class="field">
-    <%= f.label t(:year_of_birth) %>
-    <%= f.select(:year_of_birth, 1910..Time.now.year, :selected => (f.object.year_of_birth || Time.now.year)) %>
-  </div>
-  <div class="field">
-    <%= f.label :club_id, t(:club) %> <%= f.select(:club_id, options_from_collection_for_select(Club.all, "id", "name", f.object.club_id || 0), :include_blank => true)  %><br />
-  </div>
-  <div class="actions">
-    <%= f.submit t(:submit) %>
-  </div>
-  </div>
+<% if @competitor.errors.any? %>
+<div id="error_explanation">
+	<h2><%= pluralize(@competitor.errors.count, "error") %> prohibited this competitor from being saved:</h2>
+	<ul>
+		<% @competitor.errors.full_messages.each do |msg| %>
+		<li>
+			<%= msg %>
+		</li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
+<div class="well form-vertical">
+	<div class="field">
+		<%= f.label t(:first_name) %>
+		<%= f.text_field :first_name %>
+	</div>
+	<div class="field">
+		<%= f.label t(:last_name) %>
+		<%= f.text_field :last_name %>
+	</div>
+	<div class="field">
+		<%= f.label :card_id, t(:card_id) %>
+		<%= f.number_field :card_id %>
+	</div>
+	<div class="field">
+		<%= f.label t(:gender) %>
+		<%= f.label :gender_men, t(:men) %>
+		<%= f.radio_button :gender, t(:men_abbrev) %>
+		<%= f.label :gender_woman, t(:women) %>
+		<%= f.radio_button :gender, t(:women_abbrev) %>		
+	</div>
+	<div class="field">
+		<%= f.label t(:year_of_birth) %>
+		<%= f.select(:year_of_birth, 1910..Time.now.year, :selected => (f.object.year_of_birth || Time.now.year)) %>
+	</div>
+	<div class="field">
+		<%= f.label :club_id, t(:club) %> <%= f.select(:club_id, options_from_collection_for_select(Club.all, "id", "name", f.object.club_id || 0), :include_blank => true)  %>
+	</div>
+	
+	<%= f.submit t(:submit), class: "btn-primary" %>
+	
+</div>
 <% end %>

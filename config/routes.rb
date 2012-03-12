@@ -24,7 +24,12 @@ RaceManager::Application.routes.draw do
   match '/event_competitors', to: 'event_competitors#show'
   match '/teams', to: 'teams#show'
   match '/team_competitors', to: 'team_competitors#show'
-
+  
+  match '/reports/event_competitors', to: 'reports#event_competitors'    
+  match '/reports/event_results', to: 'reports#event_results'
+  match '/reports/event_temporary_results', to: 'reports#event_temporary_results'
+  match '/reports/event_station_results', to: 'reports#event_station_results'
+  
   match ':controller/:action/:controll_id'
 
   # The priority is based upon order of creation:

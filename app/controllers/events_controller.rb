@@ -80,5 +80,10 @@ class EventsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def select
+    @event = Event.find(params[:id])
+    session['event'] = @event 
+  end
 end
 

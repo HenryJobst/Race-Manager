@@ -245,6 +245,11 @@ de:
   log_out: Logout
   base_data: Grunddaten
   event_data: Wettkampfdaten
+  event_reports: Wettkampfberichte
+  event_competitors: Teilnehmerliste
+  event_results: Ergebnisliste
+  event_temporary_results: Zwischenergebnisliste
+  event_station_results: Zwischenzeitliste
   create_new_competitor: neuen Wettkämpfer anlegen
   are_you_sure: Sind sie sicher?
   powered_by: unterstützt durch

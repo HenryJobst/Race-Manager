@@ -1,10 +1,16 @@
+<% provide(:title, t(:show_club)) %>
+
+<div class="page-header">
+	<h1><%= t(:show_club) %></h1>
+</div>
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b><%= t(:name) %>:</b>
   <%= @club.name %>
 </p>
 
+<%= link_to t(:edit), edit_club_path(@club), class: "btn" %>
+<%= link_to t(:back), clubs_path, class: "btn" %>
 
-<%= link_to 'Edit', edit_club_path(@club) %> |
-<%= link_to 'Back', clubs_path %>

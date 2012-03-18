@@ -207,7 +207,12 @@ de:
   edit_competitor: Teilnehmer bearbeiten
   list_competitors: Teilnehmerliste
   new_competitor: Neuer Teilnehmer
-  show_competitor: Teilnehmerinformationen
+  show_competitor: Teilnehmerdaten
+  edit_club: Verein bearbeiten
+  list_clubs: Vereinsliste
+  new_club: Neuer Verein
+  show_club: Vereinsdaten
+  name: Name  
   first_name: Vorname
   last_name: Nachname
   year_of_birth: Geburtsjahr
@@ -251,6 +256,9 @@ de:
   event_temporary_results: Zwischenergebnisliste
   event_station_results: Zwischenzeitliste
   create_new_competitor: neuen Wettkämpfer anlegen
+  create_new_club: neuen Verein anlegen
   are_you_sure: Sind sie sicher?
   powered_by: unterstützt durch
   welcome_on_race_manager: Willkommen beim Race Manager
+  error: Fehler
+  save_error: %{entity_name} konnte nicht gespeichert werden:

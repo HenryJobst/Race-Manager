@@ -1,21 +1,35 @@
 <%= form_for(@event) do |f| %>
-  <% if @event.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
-
-      <ul>
-      <% @event.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :event_name %><br />
-    <%= f.text_field :event_name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<% if @event.errors.any? %>
+<div id="error_explanation">
+	<h2><%= pluralize(@event.errors.count, t(:error), t(:save_error), :entity_name => t(:event)) %></h2>
+	<ul>
+		<% @event.errors.full_messages.each do |msg| %>
+		<li>
+			<%= msg %>
+		</li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
+<div class="well form-vertical">
+	<div class="field">
+		<%= f.label t(:name) %>
+		<%= f.text_field :event_name %>
+	</div>	
+	<div class="field">
+		<%= f.label t(:starttime) %>
+		<%= f.datetime_select(:event_begin) %>
+	</div>
+	<div class="field">
+		<%= f.label t(:endtime) %>
+		<%= f.datetime_select(:event_end) %>
+	</div>
+	<div class="field">
+		<%= f.label t(:event_foreign_id) %>
+		<%= f.text_field :event_foreign_id, readonly: true %>
+	</div>	
+			
+	<%= f.submit t(:submit), class: "btn-primary" %>
+	
+</div>
 <% end %>

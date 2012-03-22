@@ -1,10 +1,25 @@
+<% provide(:title, t(:show_event)) %>
+
+<div class="page-header">
+	<h1><%= t(:show_event) %></h1>
+</div>
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b><%= t(:name) %>:</b>
   <%= @event.event_name %>
 </p>
 
+<p>
+  <b><%= t(:starttime) %>:</b>
+  <%= @event.event_begin %>
+</p>
 
-<%= link_to 'Edit', edit_event_path(@club) %> |
-<%= link_to 'Back', events_path %>
+<p>
+  <b><%= t(:endtime) %>:</b>
+  <%= @event.event_end %>
+</p>
+
+<%= link_to t(:edit), edit_event_path(@event), class: "btn" %>
+<%= link_to t(:back), events_path, class: "btn" %>

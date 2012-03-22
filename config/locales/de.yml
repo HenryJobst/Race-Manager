@@ -212,6 +212,10 @@ de:
   list_clubs: Vereinsliste
   new_club: Neuer Verein
   show_club: Vereinsdaten
+  edit_event: Wettkampf bearbeiten
+  list_events: Wettkampfliste
+  new_event: Neuer Wettkampf
+  show_event: Wettkampfdaten
   name: Name  
   first_name: Vorname
   last_name: Nachname
@@ -238,12 +242,16 @@ de:
   men_abbrev: M
   women_abbrev: W
   card_id: Chip-Nummer
+  starttime: Startzeit
+  endtime: Zielschluss
+  event_foreign_id: Schlüssel
   submit: Übernehmen
   home: Startseite
   show: Anzeigen
   back: Zurück
   edit: Bearbeiten
   destroy: Löschen
+  select: Auswählen
   help: Hilfe
   about: Über
   log_in: Login
@@ -261,4 +269,7 @@ de:
   powered_by: unterstützt durch
   welcome_on_race_manager: Willkommen beim Race Manager
   error: Fehler
-  save_error: %{entity_name} konnte nicht gespeichert werden:
+  #save_error: %{entity_name} konnte nicht gespeichert werden:
+  timezone_name: Berlin
+   
+  

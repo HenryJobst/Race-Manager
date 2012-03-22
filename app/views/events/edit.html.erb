@@ -1,6 +1,10 @@
-<h1>Editing event</h1>
+<% provide(:title, t(:edit_event) ) %>
+
+<div class="page-header">
+	<h1><%= t(:edit_event) %></h1>
+</div>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @event %> |
-<%= link_to 'Back', events_path %>
+<%= link_to t(:show), @event, class: "btn" %>
+<%= link_to t(:back), event_path, class: "btn" %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120301205040) do
+ActiveRecord::Schema.define(:version => 20120322201501) do
 
   create_table "clubs", :force => true do |t|
     t.string   "name"
@@ -39,21 +39,22 @@ ActiveRecord::Schema.define(:version => 20120301205040) do
     t.datetime "updated_at",    :null => false
   end
 
-  create_table "lcevents", :primary_key => "id_event", :force => true do |t|
-    t.integer   "id_country"
-    t.string    "event_foreign_id",  :limit => 15
-    t.string    "event_name",        :limit => 100
-    t.text      "event_begin",                      :null => false
-    t.text      "event_end",                        :null => false
-    t.string    "event_discipline",  :limit => 64
-    t.string    "event_form",        :limit => 64
-    t.string    "event_organiser",   :limit => 64
-    t.string    "event_picture",     :limit => 64
-    t.string    "event_url",         :limit => 64
-    t.string    "event_location",    :limit => 200
-    t.timestamp "last_modification"
-    t.datetime  "created_on"
-    t.datetime  "updated_on"
+  create_table "lcevents", :id => false, :force => true do |t|
+    t.integer  "id_event",          :limit => 11,                                     :null => false
+    t.integer  "id_country"
+    t.string   "event_foreign_id",  :limit => 15,                                     :null => false
+    t.string   "event_name",        :limit => 100
+    t.datetime "event_begin",                      :default => '2012-01-01 00:00:00', :null => false
+    t.datetime "event_end",                        :default => '2012-01-01 00:00:00', :null => false
+    t.string   "event_discipline",  :limit => 64
+    t.string   "event_form",        :limit => 64
+    t.string   "event_organiser",   :limit => 64
+    t.string   "event_picture",     :limit => 64
+    t.string   "event_url",         :limit => 64
+    t.string   "event_location",    :limit => 200
+    t.datetime "last_modification"
+    t.datetime "created_on"
+    t.datetime "updated_on"
   end
 
   add_index "lcevents", ["id_event"], :name => "id_event", :unique => true

@@ -21,18 +21,27 @@ class EventsController < ApplicationController
     end
   end
 
+  def calculateNextPrimaryKey      
+    Event.find(:first, :select => 'max(id_event) as max').max.to_i() + 1
+  end
+  
+  def calculateForeignId
+      foreignId = DateTime.now.to_date().to_formatted_s(:number)
+      foreignIdEntries = Event.find(:all, conditions: ["event_foreign_id like ?", foreignId+'%'])
+      foreignIdCount = foreignIdEntries.count + 1  
+      foreignId + "%02d" % foreignIdCount
+    end
+  
   # GET /events/new
   # GET /events/new.json
   def new
     
-    Time.zone = t(:timezone_name) if t(:timezone_name) 
-    foreignId = DateTime.now.to_date().to_formatted_s(:number)
-    foreignIdEntries = Event.find(:all, conditions: ["event_foreign_id like ?", foreignId+'%'])
-    foreignIdCount = foreignIdEntries.count + 1
+    Time.zone = t(:timezone_name) if t(:timezone_name)
 
     @event = Event.new
+    @event.id_event = calculateNextPrimaryKey()
     @event.event_name = t(:new_event)    
-    @event.event_foreign_id = foreignId + "%02d" % foreignIdCount
+    @event.event_foreign_id = calculateForeignId()
     @event.event_begin = DateTime.now
     @event.event_end = DateTime.now+5.hours
 

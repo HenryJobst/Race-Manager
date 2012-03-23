@@ -244,7 +244,8 @@ de:
   card_id: Chip-Nummer
   starttime: Startzeit
   endtime: Zielschluss
-  event_foreign_id: Schlüssel
+  event_foreign_id: Primärschlüssel (intern)
+  id_event: Primärschlüssel (extern)
   submit: Übernehmen
   home: Startseite
   show: Anzeigen
@@ -269,7 +270,7 @@ de:
   powered_by: unterstützt durch
   welcome_on_race_manager: Willkommen beim Race Manager
   error: Fehler
-  #save_error: %{entity_name} konnte nicht gespeichert werden:
+  save_error: %{entity_name} konnte nicht gespeichert werden
   timezone_name: Berlin
    
   

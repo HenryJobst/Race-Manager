@@ -25,6 +25,10 @@
 		<%= f.datetime_select(:event_end) %>
 	</div>
 	<div class="field">
+		<%= f.label t(:id_event) %>
+		<%= f.text_field :id_event, readonly: true %>
+	</div>
+	<div class="field">
 		<%= f.label t(:event_foreign_id) %>
 		<%= f.text_field :event_foreign_id, readonly: true %>
 	</div>	

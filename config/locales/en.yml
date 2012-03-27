@@ -1,7 +1,77 @@
 # Sample localization file for English. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
-en:
+en:  
   edit_competitor: Editing competitor
+  list_competitors: List competitors
+  new_competitor: New competitor
+  show_competitor: Show competitor
+  edit_club: Edit club
+  list_clubs: List clubs
+  new_club: New club
+  show_club: Show club
+  edit_event: Edit event
+  list_events: List events
+  new_event: New event
+  show_event: Show event
+  name: Name  
+  first_name: First name
+  last_name: Last name
+  year_of_birth: Year of birth
+  clubs: Clubs
+  club: Club
+  competitors: Competitors
+  competitor: Competitor
+  events: Events
+  event: Event
+  subevents: Subevents
+  subevent: Subevent
+  teams: Teams
+  team: Team
+  stamps: Stamps
+  stamp: Stamp
+  event_competitors: Event competitors
+  event_competitor: Event competitor
+  team_competitors: Team competitors
+  team_competitor: Team competitor
+  gender: Gender
+  men: men
+  women: woman
+  men_abbrev: M
+  women_abbrev: W
+  card_id: Card-Id
+  starttime: Start time
+  endtime: End time
+  event_foreign_id: Primary key (internal)
+  id_event: Primary key (external)
+  submit: Submit
+  home: Home
   show: Show
   back: Back
+  edit: Edit
+  destroy: Delete
+  select: Select
+  help: Help
+  about: About
+  log_in: Login
+  log_out: Logout
+  base_data: Base data
+  event_data: Event data
+  event_reports: Event reports
+  event_competitors: Competitor list
+  event_results: Result list
+  event_temporary_results: Temporary event result list
+  event_station_results: Temporary result list
+  create_new_competitor: Create new competitor
+  create_new_club: Create new club
+  are_you_sure: Are you sure?
+  powered_by: Powered by
+  application_name: Race Manager
+  welcome_on_race_manager: Welcome to %{application_name}
+  error: Error
+  save_error: %{entity_name} could not save
+  timezone_name: Berlin
+  about_text: This will be a web application to manage and present results of running races. At first development will start with orienteering competitions for team events with data input from SI-hardware stations.
+  about_text_contact: For further information on this software please contact
+   
+  

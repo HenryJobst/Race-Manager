@@ -268,9 +268,12 @@ de:
   create_new_club: neuen Verein anlegen
   are_you_sure: Sind sie sicher?
   powered_by: unterstützt durch
-  welcome_on_race_manager: Willkommen beim Race Manager
+  application_name: Wettkampf-Manager
+  welcome_on_race_manager: Willkommen beim %{application_name}
   error: Fehler
   save_error: %{entity_name} konnte nicht gespeichert werden
   timezone_name: Berlin
-   
+  about_text: Diese Webanwendung dient zur Pflege und Präsentation von Laufwettbewerben. Zu Beginn konzentriert sich die Entwicklung auf Staffelwettbewerbe beim Orientierungslauf mit dem Import der Daten von SI-Stationen.
+  about_text_contact: Für weitere Informationen zu dieser Software wenden sie sich bitte an
+  
   

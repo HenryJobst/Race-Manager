@@ -75,6 +75,22 @@ p {
   }
 }
 
+#event {
+  float: center;
+  margin-left: 50px;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
 /* footer */
 
 footer {

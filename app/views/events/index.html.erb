@@ -19,10 +19,15 @@
 
 <% @events.each do |event| %>
   <tr>
-    <td><%= event.event_name %></td>
+    <td>	
+    	<% if session[:event] == event %>
+    	<%= "*" %>
+		<% end %>				
+    	<%= event.event_name %>
+    </td>
     <td><%= event.event_begin %></td>
     <td><%= event.event_end %></td>
-    <td><%= link_to t(:select), events_path, action: :select_active %></td>
+    <td><%= link_to t(:select), select_event_path(id: event.id_event) %></td>
     <td><%= link_to t(:show), event %></td>
     <td><%= link_to t(:edit), edit_event_path(event) %></td>
     <td><%= link_to t(:destroy), event, confirm: t(:are_you_sure), method: :delete %></td>

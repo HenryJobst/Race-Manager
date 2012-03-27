@@ -38,10 +38,8 @@ class EventsController < ApplicationController
     
     Time.zone = t(:timezone_name) if t(:timezone_name)
 
-    @event = Event.new
-    @event.id_event = calculateNextPrimaryKey()
+    @event = Event.new    
     @event.event_name = t(:new_event)    
-    @event.event_foreign_id = calculateForeignId()
     @event.event_begin = DateTime.now
     @event.event_end = DateTime.now+5.hours
 
@@ -60,6 +58,9 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @event = Event.new(params[:event])
+      
+    @event.id_event = calculateNextPrimaryKey()    
+    @event.event_foreign_id = calculateForeignId()  
 
     respond_to do |format|
       if @event.save
@@ -102,7 +103,12 @@ class EventsController < ApplicationController
   
   def select
     @event = Event.find(params[:id])
-    session['event'] = @event 
+    session[:event] = @event 
+      
+    respond_to do |format|
+      format.html { redirect_to @event }
+      format.json { render json: @events }
+    end
   end
 end
 

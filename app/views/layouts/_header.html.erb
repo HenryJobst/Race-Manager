@@ -3,7 +3,12 @@
 		<div class="container">
 			<!--%= image_tag "race_manager_logo.png", alt: "Race Manager", height: "40", id: "logo" %-->
 			<p class="nav pull-left", id="logo">
-				Race Manager
+			<%= t(:application_name) %>
+			</p>
+			<p class="nav center", id="event">
+				<% if session[:event] %> 
+				* <%= session[:event].event_name %> *	 
+				<% end %>				
 			</p>
 			<nav>
 				<ul class="nav pull-right">

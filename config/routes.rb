@@ -24,6 +24,7 @@ RaceManager::Application.routes.draw do
   match '/event_competitors', to: 'event_competitors#show'
   match '/teams', to: 'teams#show'
   match '/team_competitors', to: 'team_competitors#show'
+  match '/select_event', to: 'events#select'
   
   match '/reports/event_competitors', to: 'reports#event_competitors'    
   match '/reports/event_results', to: 'reports#event_results'

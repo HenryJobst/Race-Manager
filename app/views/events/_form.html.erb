@@ -1,7 +1,7 @@
 <%= form_for(@event) do |f| %>
 <% if @event.errors.any? %>
 <div id="error_explanation">
-	<h2><%= pluralize(@event.errors.count, t(:error), t(:save_error), :entity_name => t(:event)) %></h2>
+	<h2><%= pluralize(@event.errors.count, t(:error), t(:save_error, :entity_name => t(:event))) %></h2>
 	<ul>
 		<% @event.errors.full_messages.each do |msg| %>
 		<li>
@@ -23,15 +23,7 @@
 	<div class="field">
 		<%= f.label t(:endtime) %>
 		<%= f.datetime_select(:event_end) %>
-	</div>
-	<div class="field">
-		<%= f.label t(:id_event) %>
-		<%= f.text_field :id_event, readonly: true %>
-	</div>
-	<div class="field">
-		<%= f.label t(:event_foreign_id) %>
-		<%= f.text_field :event_foreign_id, readonly: true %>
-	</div>	
+	</div>		
 			
 	<%= f.submit t(:submit), class: "btn-primary" %>
 	
